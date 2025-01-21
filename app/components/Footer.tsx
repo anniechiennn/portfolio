@@ -2,14 +2,14 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/10">
       <div className="container mx-auto px-4 py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div className="space-y-4">
-            <h2 className="text-xl font-bold">Your Name</h2>
-            <p className="text-zinc-400">
-              Operations Analyst & Product Manager based in Your City. Available for freelance work and collaborations.
+        <div className="grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-5 space-y-4">
+            <h2 className="text-xl font-bold">Annie Chien</h2>
+            <p className="text-zinc-400 text-lg leading-relaxed">
+              Operations Analyst & Marketing Specialist based in the United States. Open to work and collaborations.
             </p>
           </div>
-          <div>
+          <div className="md:col-span-2">
             <h3 className="text-lg font-bold mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li>
@@ -23,61 +23,48 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/blog" className="text-zinc-400 hover:text-white transition-colors">
-                  Blog
-                </a>
-              </li>
-              <li>
                 <a href="/resume" className="text-zinc-400 hover:text-white transition-colors">
                   Resume
                 </a>
               </li>
             </ul>
           </div>
-          <div>
+          <div className="md:col-span-2">
             <h3 className="text-lg font-bold mb-4">Social</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-zinc-400 hover:text-white transition-colors">
+                <a
+                  href="https://www.linkedin.com/in/anniechien/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 hover:text-white transition-colors"
+                >
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="#" className="text-zinc-400 hover:text-white transition-colors">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-zinc-400 hover:text-white transition-colors">
+                <a
+                  href="https://github.com/anniechiennn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 hover:text-white transition-colors"
+                >
                   GitHub
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-zinc-400 hover:text-white transition-colors">
-                  Instagram
-                </a>
-              </li>
             </ul>
           </div>
-          <div>
+          <div className="md:col-span-3">
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-zinc-400">your@email.com</li>
-              <li className="text-zinc-400">+1 234 567 890</li>
-              <li className="text-zinc-400">Your City, Country</li>
+              <li className="text-zinc-400">annie.ia.chien@gmail.com</li>
+              <li className="text-zinc-400">+1 857 313 5660</li>
+              <li className="text-zinc-400">Boston, USA</li>
             </ul>
           </div>
         </div>
-        <div className="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-zinc-400 text-sm">© {new Date().getFullYear()} Your Name. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">
-              Terms of Service
-            </a>
-          </div>
+        <div className="mt-20 pt-8 border-t border-white/10 text-center">
+          <p className="text-zinc-400 text-sm">© {new Date().getFullYear()} Annie Chien. All rights reserved.</p>
         </div>
       </div>
     </footer>

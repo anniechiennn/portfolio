@@ -9,6 +9,20 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
 
+  useEffect(() => {
+    const handleRouteChange = () => {
+      window.scrollTo(0, 0)
+    }
+
+    // Add event listener for route changes
+    window.addEventListener("popstate", handleRouteChange)
+
+    return () => {
+      // Remove event listener on cleanup
+      window.removeEventListener("popstate", handleRouteChange)
+    }
+  }, [])
+
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     if (pathname === "/") {
@@ -19,14 +33,14 @@ export default function Navigation() {
     setIsOpen(false)
   }
 
-  const navItems = ["Home", "Projects", "Blog", "Resume", "Contact"]
+  const navItems = ["Home", "Projects", "Resume", "Contact"]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 mix-blend-difference bg-black/50 backdrop-blur-sm">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-xl font-bold tracking-tighter">
-            YOUR NAME
+            ANNIE CHIEN
           </Link>
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
@@ -80,7 +94,13 @@ function NavItem({ item, onClick, mobile = false }: NavItemProps) {
     <Link
       href={href}
       className={`${mobile ? "block py-2" : ""} hover:opacity-60 transition-opacity text-white ${isActive ? "font-bold" : ""}`}
-      onClick={onClick}
+      onClick={(e) => {
+        if (onClick) {
+          onClick(e)
+        } else {
+          window.scrollTo(0, 0)
+        }
+      }}
     >
       {item}
     </Link>

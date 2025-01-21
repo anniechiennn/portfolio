@@ -5,24 +5,24 @@ import { useState } from "react"
 
 const faqItems = [
   {
-    title: "MY WORKFLOW",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dui eu mi viverra molestie.",
+    title: "OPERATIONAL EXCELLENCE",
+    description: "Analyzed delivery partner data using SQL and Tableau, improving retention by 5% QoQ through optimized incentives and campaigns.",
   },
   {
-    title: "NO-CODING",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dui eu mi viverra molestie.",
+    title: "REVENUE OPERATIONS",
+    description: "Conducted A/B testing and BI analysis to optimize pricing strategies, increasing paid user percentage by 15% and ARPPU by 40%.",
   },
   {
-    title: "REVISIONS",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dui eu mi viverra molestie.",
+    title: "PROCESS OPTIMIZATION",
+    description: "Implemented demand forecasting and automated inventory management processes, reducing operational costs by 5% while maintaining service quality.",
   },
   {
-    title: "CO-WORK",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dui eu mi viverra molestie.",
+    title: "INDUSTRY RESEARCH",
+    description: "Published podcast industry reports reaching 20+ media outlets, generating 10,000+ downloads through comprehensive data analysis and insights.",
   },
   {
-    title: "THE BUDGET",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dui eu mi viverra molestie.",
+    title: "DIGITAL GROWTH",
+    description: "Drove 40% growth in Daily Active Users through optimized digital campaigns and improved homepage click-through rates by 13% using data-driven content strategies.",
   },
 ]
 
@@ -40,8 +40,8 @@ export default function FaqSection() {
               viewport={{ once: true }}
               className="text-6xl md:text-7xl font-bold leading-none mb-8"
             >
-              YOU ASK
-              <br />I ANSWER
+              CAREER
+              <br />HIGHLIGHTS
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ export default function FaqSection() {
               transition={{ delay: 0.2 }}
               className="text-zinc-500"
             >
-              Can't find your question? Ask me directly.
+              What I achieved in the past.
             </motion.p>
           </div>
 

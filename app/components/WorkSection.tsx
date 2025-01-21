@@ -2,43 +2,35 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 
 const projects = [
   {
-    title: "Project 1",
-    category: "Branding & Strategy",
+    title: "15 Years of Steam: Marketplace and Genre Trends",
+    category: "Marketing Analytics | Machine Learning",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7BFE5F1770-F5C2-42A9-9FC0-F7119A614271%7D-Q6nUTYR1T9O6sPPDC3GTKQUNswyIwj.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7B561F1AA6-967A-4F07-BEDF-E9411FC686A1%7D-mi5ryS3h0rQ7HmE9V4JqDxwAnTadRN.png",
+    link: "https://github.com/anniechiennn/steam-games-nlp",
   },
   {
-    title: "Project 2",
-    category: "Web Design & Dev",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7BFE5F1770-F5C2-42A9-9FC0-F7119A614271%7D-Q6nUTYR1T9O6sPPDC3GTKQUNswyIwj.png",
+    title: "Steam Library Analysis: Uncovering User Behaviour and Video Game Popularity",
+    category: "Data Analysis | SQL BigQuery",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/er_diagram.jpg-VlfCq3HhMTp1ZXFchZQbKOzokpU0uQ.jpeg",
+    link: "https://github.com/anniechiennn/steam-library-analysis",
   },
   {
-    title: "Project 3",
-    category: "Branding",
+    title: "Uber and Lyft Trip Fare Price Prediction",
+    category: "Data Analysis | Machine Learning",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7BFE5F1770-F5C2-42A9-9FC0-F7119A614271%7D-Q6nUTYR1T9O6sPPDC3GTKQUNswyIwj.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/price_prediction.jpg-BT7Lud6y814FXfl2be6jY8HGcS8Vgr.jpeg",
+    link: "https://github.com/anniechiennn/ride-share-price-prediction",
   },
   {
-    title: "Project 4",
-    category: "Development",
+    title: "Personalized News Recommendation System Using NLP",
+    category: "Data Analysis | Machine Learning",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7BFE5F1770-F5C2-42A9-9FC0-F7119A614271%7D-Q6nUTYR1T9O6sPPDC3GTKQUNswyIwj.png",
-  },
-  {
-    title: "Project 5",
-    category: "Design",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7BFE5F1770-F5C2-42A9-9FC0-F7119A614271%7D-Q6nUTYR1T9O6sPPDC3GTKQUNswyIwj.png",
-  },
-  {
-    title: "Project 6",
-    category: "Strategy",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%7BFE5F1770-F5C2-42A9-9FC0-F7119A614271%7D-Q6nUTYR1T9O6sPPDC3GTKQUNswyIwj.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/news_sentiment.jpg-iOktSmIxx9pRiwccmgjVzOYAHuVWxe.jpeg",
+    link: "https://github.com/anniechiennn/nlp-news-recommendation",
   },
 ]
 
@@ -54,25 +46,30 @@ export default function WorkSection() {
         >
           <h2 className="text-7xl md:text-8xl font-bold mb-6">MY WORK</h2>
           <p className="text-zinc-500 max-w-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dui eu mi viverra molestie.
+            A collection of data analytics and machine learning projects focusing on market analysis and user behavior.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="mt-4 px-6 py-2 border border-white/20 rounded-full text-sm"
-          >
-            All Work
-          </motion.button>
+          <Link href="/projects">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              className="mt-4 px-6 py-2 border border-white/20 rounded-full text-sm"
+            >
+              All Work
+            </motion.button>
+          </Link>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative aspect-[4/3]"
+              className="group relative aspect-[4/3] block overflow-hidden"
             >
               <Image
                 src={project.image || "/placeholder.svg"}
@@ -80,11 +77,12 @@ export default function WorkSection() {
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
+              <div className="absolute inset-0 bg-black/60 transition-opacity group-hover:opacity-75" />
               <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity">
                 <h3 className="text-lg font-medium">{project.title}</h3>
                 <p className="text-sm text-zinc-400">{project.category}</p>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>

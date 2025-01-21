@@ -8,11 +8,11 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Your Name - Portfolio",
-    template: "%s | Your Name",
+    default: "Annie Chien - Portfolio",
+    template: "%s | Annie Chien",
   },
-  description: "Operations Analyst & Product Manager Portfolio",
-  keywords: ["portfolio", "operations analyst", "product manager"],
+  description: "Operations Analyst & Marketing Specialist Portfolio",
+  keywords: ["portfolio", "operations analyst", "marketing specialist", "data analytics"],
   robots: {
     index: true,
     follow: true,
