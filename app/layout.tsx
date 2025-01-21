@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={`${spaceGrotesk.className} text-white antialiased`}>
         <MouseCursor />
         <Navigation />
-        <main className="min-h-screen">{children}</main>
+        {children}
       </body>
     </html>
   )

@@ -4,6 +4,7 @@ const nextConfig = {
   basePath: '/portfolio',
   images: {
     unoptimized: true,
+    domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com'],
   },
   assetPrefix: '/portfolio/',
   trailingSlash: true,
