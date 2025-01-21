@@ -87,24 +87,26 @@ function HeroSection() {
             </motion.div>
           </Link>
 
-          <motion.div
-            className="group relative aspect-[4/3] overflow-hidden"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-          >
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/S__145498240.jpg-Gqg6tBhj54DTPYzn2zKp88lDromZ29.jpeg"
-              alt="Annie Chien"
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-black/60 transition-opacity group-hover:opacity-75" />
-            <div className="absolute bottom-4 left-4">
-              <h2 className="text-2xl font-bold mb-1">Me - Annie Chien</h2>
-              <p className="text-sm text-zinc-300">Operations Analyst | Marketing</p>
-            </div>
-          </motion.div>
+          <Link href="/resume">
+            <motion.div
+              className="group relative aspect-[4/3] overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+            >
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/S__145498240.jpg-Gqg6tBhj54DTPYzn2zKp88lDromZ29.jpeg"
+                alt="Annie Chien"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/60 transition-opacity group-hover:opacity-75" />
+              <div className="absolute bottom-4 left-4">
+                <h2 className="text-2xl font-bold mb-1">Me - Annie Chien</h2>
+                <p className="text-sm text-zinc-300">Operations Analyst | Marketing</p>
+              </div>
+            </motion.div>
+          </Link>
         </div>
 
         <motion.div
