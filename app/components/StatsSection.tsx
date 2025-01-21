@@ -1,23 +1,21 @@
 "use client"
 
-import { motion, useMotionValue, useTransform, animate } from "framer-motion"
+import { motion, useMotionValue, useTransform, animate, MotionValue } from "framer-motion"
 import { useEffect } from "react"
 
 const AnimatedNumber = ({ value }: { value: number }) => {
   const count = useMotionValue(0)
-  const rounded = useTransform(count, (latest) => {
+  const rounded = useTransform(count, (latest: number) => {
     return latest.toFixed(0).padStart(2, "0")
   })
 
   useEffect(() => {
-    const animation = animate(count, value, {
+    const controls = animate(count, value, {
       duration: 2,
       ease: [0.25, 0.1, 0.25, 1],
-      from: 0,
-      type: "tween",
     })
 
-    return animation.stop
+    return controls.stop
   }, [count, value])
 
   return <motion.span className="font-mono tabular-nums inline-block w-full">{rounded}</motion.span>
@@ -53,4 +51,3 @@ export default function StatsSection() {
     </section>
   )
 }
-
