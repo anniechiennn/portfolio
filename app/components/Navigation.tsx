@@ -46,7 +46,7 @@ export default function Navigation() {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="absolute top-full left-0 right-0 bg-black/90 backdrop-blur-sm p-4 md:hidden"
+            className="absolute top-full left-0 right-0 bg-black/80 backdrop-blur-sm p-4 md:hidden"
           >
             {navItems.map((item) => (
               <NavItem key={item} item={item} onClick={() => setIsOpen(false)} mobile />

@@ -45,12 +45,33 @@ function HeroSection() {
         </motion.h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-          <Link href="/projects">
+          <Link href="/resume">
             <motion.div
               className="group relative aspect-[4/3] overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
+            >
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/S__145498240.jpg-Gqg6tBhj54DTPYzn2zKp88lDromZ29.jpeg"
+                alt="Annie Chien"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/60 transition-opacity group-hover:opacity-75" />
+              <div className="absolute bottom-4 left-4">
+                <h2 className="text-2xl font-bold mb-1">Me - Annie Chien</h2>
+                <p className="text-sm text-zinc-300">Operations Analyst | Marketing</p>
+              </div>
+            </motion.div>
+          </Link>
+
+          <Link href="/projects">
+            <motion.div
+              className="group relative aspect-[4/3] overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
             >
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/claudio-schwarz-fyeOxvYvIyY-unsplash.jpg-L4nge0PzPES9nywG2EVG3eGEiRE8sK.jpeg"
@@ -71,7 +92,7 @@ function HeroSection() {
               className="group relative aspect-[4/3] overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
+              transition={{ delay: 0.8 }}
             >
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-neel-cckf4TsHAuw-unsplash.jpg-ujZ9aEeWMgCyeGvnxntHdaZhY91D4r.jpeg"
@@ -83,27 +104,6 @@ function HeroSection() {
               <div className="absolute bottom-4 left-4">
                 <h2 className="text-2xl font-bold mb-1">Resume</h2>
                 <p className="text-sm text-zinc-300">Experience & Skills</p>
-              </div>
-            </motion.div>
-          </Link>
-
-          <Link href="/resume">
-            <motion.div
-              className="group relative aspect-[4/3] overflow-hidden"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-            >
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/S__145498240.jpg-Gqg6tBhj54DTPYzn2zKp88lDromZ29.jpeg"
-                alt="Annie Chien"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/60 transition-opacity group-hover:opacity-75" />
-              <div className="absolute bottom-4 left-4">
-                <h2 className="text-2xl font-bold mb-1">Me - Annie Chien</h2>
-                <p className="text-sm text-zinc-300">Operations Analyst | Marketing</p>
               </div>
             </motion.div>
           </Link>
