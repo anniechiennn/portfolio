@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/portfolio', // Adjust this if your repo name is different
+  basePath: '/portfolio',
   images: {
     unoptimized: true,
   },
-  assetPrefix: '/portfolio/', // Add this line
-};
+  assetPrefix: '/portfolio/',
+  trailingSlash: true,
+}
 
-export default nextConfig;
+export default nextConfig
 

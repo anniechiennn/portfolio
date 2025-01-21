@@ -30,3 +30,26 @@ html {
   background-color: black;
 }
 
+/* Force Tailwind utilities to be included in production */
+.fixed {
+  position: fixed;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.mix-blend-difference {
+  mix-blend-mode: difference;
+}
+
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
