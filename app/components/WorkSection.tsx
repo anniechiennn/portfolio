@@ -36,8 +36,8 @@ const projects = [
 
 export default function WorkSection() {
   return (
-    <section id="work" className="container mx-auto px-6 py-32">
-      <div className="max-w-6xl mx-auto">
+    <section id="work" className="container mx-auto px-4 py-32">
+      <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ export default function WorkSection() {
           </Link>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.a
               key={index}
@@ -69,32 +69,21 @@ export default function WorkSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative aspect-[4/3] block overflow-hidden w-[95%] mx-auto"
+              className="group relative aspect-[4/3] block overflow-hidden"
+              style={{ width: "95%", margin: "0 auto" }}
             >
               <Image
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
                 fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                className="object-cover transition-all duration-500 group-hover:scale-105 grayscale"
               />
-              <div className="absolute inset-0 bg-black/60 transition-opacity group-hover:bg-black/75" />
-              <div className="absolute inset-x-4 bottom-4">
-                <motion.h3
-                  className="text-lg font-medium mb-2"
-                  initial={{ opacity: 1 }}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.2 }}
-                >
+              <div className="absolute inset-0 bg-black/60 transition-opacity group-hover:opacity-75" />
+              <div className="absolute inset-0 flex flex-col justify-end p-4">
+                <motion.h3 className="text-lg font-medium mb-1" whileHover={{ y: -5 }}>
                   {project.title}
                 </motion.h3>
-                <motion.p
-                  className="text-sm text-zinc-400"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
-                >
-                  {project.category}
-                </motion.p>
+                <p className="text-sm text-zinc-400">{project.category}</p>
               </div>
             </motion.a>
           ))}
