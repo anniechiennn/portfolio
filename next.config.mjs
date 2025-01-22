@@ -10,7 +10,6 @@ const nextConfig = {
   assetPrefix: '/portfolio/',
   trailingSlash: true,
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['framer-motion'],
   },
 }
