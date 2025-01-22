@@ -26,7 +26,7 @@ export default function HomeContent() {
 function HeroSection() {
   return (
     <section className="min-h-screen flex items-center justify-center relative px-4">
-      <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto pt-20">
         <motion.p
           className="text-sm mb-4 text-zinc-400"
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ function HeroSection() {
           I&apos;M ANNIE CHIEN
         </motion.h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 mb-24">
           <Link href="/resume">
             <motion.div
               className="group relative aspect-[4/3] overflow-hidden"
@@ -110,7 +110,7 @@ function HeroSection() {
         </div>
 
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}

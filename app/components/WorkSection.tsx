@@ -36,8 +36,8 @@ const projects = [
 
 export default function WorkSection() {
   return (
-    <section id="work" className="container mx-auto px-4 py-32">
-      <div className="max-w-5xl mx-auto">
+    <section id="work" className="container mx-auto px-6 py-32">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ export default function WorkSection() {
           </Link>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <motion.a
               key={index}
@@ -69,7 +69,7 @@ export default function WorkSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative aspect-[4/3] block overflow-hidden"
+              className="group relative aspect-[4/3] block overflow-hidden w-[95%] mx-auto"
             >
               <Image
                 src={project.image || "/placeholder.svg"}
@@ -77,10 +77,24 @@ export default function WorkSection() {
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
-              <div className="absolute inset-0 bg-black/60 transition-opacity group-hover:opacity-75" />
-              <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <h3 className="text-lg font-medium">{project.title}</h3>
-                <p className="text-sm text-zinc-400">{project.category}</p>
+              <div className="absolute inset-0 bg-black/60 transition-opacity group-hover:bg-black/75" />
+              <div className="absolute inset-x-4 bottom-4">
+                <motion.h3
+                  className="text-lg font-medium mb-2"
+                  initial={{ opacity: 1 }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {project.title}
+                </motion.h3>
+                <motion.p
+                  className="text-sm text-zinc-400"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                >
+                  {project.category}
+                </motion.p>
               </div>
             </motion.a>
           ))}

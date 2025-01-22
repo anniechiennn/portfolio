@@ -15,7 +15,8 @@ jobs:
         uses: tibdex/github-app-token@v1
         with:
           app_id: ${{ secrets.APP_ID }}
-          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          private_key: ${{ secrets.APP_PRIVATE_KEY }}
+          repository: ${{ github.repository }}
 
       - name: Use the token
         env:
