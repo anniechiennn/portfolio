@@ -52,6 +52,16 @@ export default function Footer() {
                   GitHub
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://anniechien.substack.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 hover:text-white transition-colors"
+                >
+                  Substack
+                </a>
+              </li>
             </ul>
           </div>
           <div className="md:col-span-3">

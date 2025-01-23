@@ -22,7 +22,7 @@ export default function Navigation() {
     }
   }, [])
 
-  const navItems = ["Home", "Projects", "Resume"]
+  const navItems = ["Home", "Projects", "Resume", "Substack"]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 mix-blend-difference bg-black/50 backdrop-blur-sm pt-4">
@@ -71,12 +71,15 @@ interface NavItemProps {
 
 function NavItem({ item, onClick, mobile = false }: NavItemProps) {
   const pathname = usePathname()
-  const isActive = pathname === (item === "Home" ? "/" : `/${item.toLowerCase()}`)
-  const href = item === "Home" ? "/" : `/${item.toLowerCase()}`
+  const isSubstack = item === "Substack"
+  const isActive = !isSubstack && pathname === (item === "Home" ? "/" : `/${item.toLowerCase()}`)
+  const href = isSubstack ? "https://anniechien.substack.com/" : item === "Home" ? "/" : `/${item.toLowerCase()}`
 
   return (
     <Link
       href={href}
+      target={isSubstack ? "_blank" : undefined}
+      rel={isSubstack ? "noopener noreferrer" : undefined}
       className={`${
         mobile ? "block py-2 hover:bg-white/10 px-4 rounded transition-colors" : ""
       } hover:opacity-60 transition-opacity text-white ${isActive ? "font-bold" : ""}`}

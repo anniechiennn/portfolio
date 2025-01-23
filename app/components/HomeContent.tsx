@@ -245,6 +245,17 @@ function ContactSection() {
               github.com/anniechiennn
             </a>
           </p>
+          <p className="text-xl">
+            <span className="font-bold">Substack:</span>{" "}
+            <a
+              href="https://anniechien.substack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              anniechien.substack.com
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
