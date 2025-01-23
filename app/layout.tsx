@@ -18,7 +18,13 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AC_logo-esPm2FbM4dKsPh3rr0uvANUX0poXb6.png",
+    shortcut: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AC_logo-esPm2FbM4dKsPh3rr0uvANUX0poXb6.png",
+    apple: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AC_logo-esPm2FbM4dKsPh3rr0uvANUX0poXb6.png",
+    other: {
+      rel: "apple-touch-icon-precomposed",
+      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AC_logo-esPm2FbM4dKsPh3rr0uvANUX0poXb6.png",
+    },
   },
 }
 
