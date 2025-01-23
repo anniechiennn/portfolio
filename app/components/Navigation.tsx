@@ -28,7 +28,7 @@ export default function Navigation() {
     <header className="fixed top-0 left-0 right-0 z-50 mix-blend-difference bg-black/50 backdrop-blur-sm pt-4">
       <nav className="container mx-auto px-4 py-2">
         <div className="flex justify-between items-center">
-          <Link href="/" className="relative w-10 h-10">
+          <Link href="/" className="relative w-10 h-10 -ml-2">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AC_logo-esPm2FbM4dKsPh3rr0uvANUX0poXb6.png"
               alt="AC Logo"
