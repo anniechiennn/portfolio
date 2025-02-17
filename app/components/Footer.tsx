@@ -3,13 +3,15 @@ export default function Footer() {
     <footer className="border-t border-white/10">
       <div className="container mx-auto px-4 py-20">
         <div className="grid md:grid-cols-12 gap-12">
-          <div className="md:col-span-5 space-y-4">
+          <div className="md:col-span-6 space-y-4">
             <h2 className="text-xl font-bold">Annie Chien</h2>
             <p className="text-zinc-400 text-lg leading-relaxed">
-              Operations Analyst & Marketing Specialist based in the United States. Open to work and collaborations.
+              Operations Analyst & Marketing Specialist based in the United States.
+              <br />
+              Open to work and collaborations.
             </p>
           </div>
-          <div className="md:col-span-2">
+          <div className="md:col-span-3">
             <h3 className="text-lg font-bold mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li>
@@ -29,7 +31,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="md:col-span-2">
+          <div className="md:col-span-3">
             <h3 className="text-lg font-bold mb-4">Social</h3>
             <ul className="space-y-2">
               <li>
@@ -62,14 +64,6 @@ export default function Footer() {
                   Substack
                 </a>
               </li>
-            </ul>
-          </div>
-          <div className="md:col-span-3">
-            <h3 className="text-lg font-bold mb-4">Contact</h3>
-            <ul className="space-y-2">
-              <li className="text-zinc-400">annie.ia.chien@gmail.com</li>
-              <li className="text-zinc-400">+1 857 313 5660</li>
-              <li className="text-zinc-400">Boston, USA</li>
             </ul>
           </div>
         </div>
